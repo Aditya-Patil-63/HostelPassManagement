@@ -7,7 +7,6 @@ A simple, secure, and modern Android application to manage leave and outing pass
 ## 📦 Download & Demo
 
 - **[Download the Latest APK](https://github.com/Aditya-Patil-63/HostelPassManagement/releases/latest)**
-- **[🎥 Watch the Demo Video on YouTube](https://youtube.com/link-placeholder)**
 
 ---
 

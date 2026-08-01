@@ -37,4 +37,6 @@ app/google-services.json
 build_log.txt
 functions/node_modules/
 functions/.firebaserc
+AndroidKeys/
+app/release/
 
