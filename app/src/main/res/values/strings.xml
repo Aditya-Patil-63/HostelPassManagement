@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hostel Pass Manager</string>
+    <string name="app_subtitle">Shirpur Campus</string>
+
+    <!-- Role Selection -->
+    <string name="select_role">Select Your Role</string>
+    <string name="continue_btn">Continue</string>
+
+    <!-- Auth -->
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="email_hint">Email Address</string>
+    <string name="password_hint">Password</string>
+    <string name="name_hint">Full Name</string>
+    <string name="phone_hint">Mobile Number</string>
+    <string name="parent_phone_hint">Parent Mobile Number</string>
+    <string name="employee_id_hint">Employee ID</string>
+
+    <string name="upload_photo">Upload Photo</string>
+    <string name="no_account">Don\'t have an account? Register</string>
+    <string name="have_account">Already have an account? Login</string>
+
+    <!-- Dashboard -->
+    <string name="apply_leave">Apply Leave Pass</string>
+    <string name="apply_outpass">Apply Out Pass</string>
+    <string name="view_status">View Status</string>
+    <string name="my_profile">My Profile</string>
+    <string name="leave_requests">Leave Requests</string>
+    <string name="outing_requests">Outing Requests</string>
+    <string name="view_records">View Records</string>
+    <string name="verify_pass">Verify Pass</string>
+    <string name="logout">Logout</string>
+
+    <!-- Leave Form -->
+    <string name="reason_hint">Reason for Leave</string>
+    <string name="from_date_hint">From Date</string>
+    <string name="to_date_hint">To Date</string>
+    <string name="submit">Submit</string>
+
+    <!-- Out Pass Form -->
+    <string name="time_out_hint">Expected Time Out</string>
+    <string name="time_in_hint">Expected Time In</string>
+
+    <!-- Status Labels -->
+    <string name="status_pending">PENDING</string>
+    <string name="status_approved">APPROVED</string>
+    <string name="status_rejected">REJECTED</string>
+    <string name="status_out">OUT</string>
+
+    <!-- Security -->
+    <string name="enter_pass_id">Enter Pass ID</string>
+    <string name="verify">Verify</string>
+    <string name="allow_exit">Allow Exit</string>
+    <string name="reject_pass">Reject</string>
+    <string name="mark_out">Mark as OUT</string>
+
+    <!-- Hostel Info -->
+    <string name="hostel_info_title">NMIMS Hostel — Shirpur Campus</string>
+    <string name="hostel_address">Shirpur, Dhule, Maharashtra — 425405</string>
+    <string name="hostel_phone">+91 2563 255 000</string>
+
+    <!-- Warden Actions -->
+    <string name="approve">Approve</string>
+    <string name="reject">Reject</string>
+    <string name="rejection_reason_hint">Enter rejection reason</string>
+    <string name="call_parent">Call Parent</string>
+    <string name="confirm">Confirm</string>
+
+    <!-- Spinner Arrays -->
+    <string-array name="roles">
+        <item>Student</item>
+        <item>Warden</item>
+        <item>Security</item>
+    </string-array>
+
+    <string-array name="years">
+        <item>First Year</item>
+        <item>Second Year</item>
+        <item>Third Year</item>
+        <item>Fourth Year</item>
+    </string-array>
+
+    <string-array name="leave_reasons">
+        <item>Going Home</item>
+        <item>Medical Emergency</item>
+        <item>Family Function</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="outpass_reasons">
+        <item>Medical / Pharmacy</item>
+        <item>Daily Use Items</item>
+        <item>Food / Eating Out</item>
+        <item>Bank / ATM</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="hostel_blocks">
+        <item>Old Boys Hostel</item>
+        <item>New Boys Hostel</item>
+        <item>Girls Hostel</item>
+    </string-array>
+</resources>

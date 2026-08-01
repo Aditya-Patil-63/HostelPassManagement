@@ -1,0 +1,319 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/portal_header_dark">
+
+    <!-- Header (Portal Gradient) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/header_portal_gradient"
+        android:elevation="8dp"
+        android:padding="20dp"
+        android:paddingTop="16dp"
+        android:gravity="center_vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivWardenPhoto"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/avatar_placeholder" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="14dp">
+
+            <TextView
+                android:id="@+id/tvWardenName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Warden Name"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Warden · Shirpur Campus"
+                android:textColor="@color/brand_primary_light"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Notification Bell -->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btnNotifications"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_notification_bell"
+                android:background="@drawable/card_background_dark"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:tint="@color/brand_primary" />
+
+            <TextView
+                android:id="@+id/tvNotifBadge"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:text="0"
+                android:textColor="@color/brand_primary"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/badge_notification"
+                android:layout_gravity="top|end"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Section Header: Rounded Maroon Bar -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="   WARDEN DASHBOARD   "
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:background="@drawable/bg_portal_header"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Leave Requests Card -->
+            <LinearLayout
+                android:id="@+id/cardLeaveRequests"
+                android:layout_width="match_parent"
+                android:layout_height="74dp"
+                android:orientation="horizontal"
+                android:background="@drawable/card_background_dark"
+                android:padding="16dp"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="🏡"
+                    android:textSize="22sp"
+                    android:gravity="center" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Leave Requests"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvPendingLeaveCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 pending"
+                        android:textColor="@color/status_pending"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="›"
+                    android:textColor="@color/brand_primary"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <!-- Outing Requests Card -->
+            <LinearLayout
+                android:id="@+id/cardOutingRequests"
+                android:layout_width="match_parent"
+                android:layout_height="74dp"
+                android:orientation="horizontal"
+                android:background="@drawable/card_background_dark"
+                android:padding="16dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="12dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="🚶"
+                    android:textSize="22sp"
+                    android:gravity="center" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Outpass Requests"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvPendingOutCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 pending"
+                        android:textColor="@color/status_pending"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="›"
+                    android:textColor="@color/brand_primary"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <!-- View Records Card -->
+            <LinearLayout
+                android:id="@+id/cardViewRecords"
+                android:layout_width="match_parent"
+                android:layout_height="74dp"
+                android:orientation="horizontal"
+                android:background="@drawable/card_background_dark"
+                android:padding="16dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="12dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="📊"
+                    android:textSize="22sp"
+                    android:gravity="center" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View Records"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="All approved passes"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="›"
+                    android:textColor="@color/brand_primary"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <!-- Profile Action -->
+            <Button
+                android:id="@+id/btnWardenProfile"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/cardWardenProfile"
+                android:layout_width="match_parent"
+                android:layout_height="74dp"
+                android:orientation="horizontal"
+                android:background="@drawable/card_background_dark"
+                android:padding="16dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="12dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="👤"
+                    android:textSize="22sp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="My Profile"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="›"
+                    android:textColor="@color/brand_primary"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

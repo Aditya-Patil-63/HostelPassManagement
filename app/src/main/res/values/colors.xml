@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand Colors (NMIMS Portal - Premium Dark Theme) -->
+    <color name="brand_primary">#5D0E0E</color> <!-- Premium Dark Maroon -->
+    <color name="brand_primary_dark">#3A0808</color>
+    <color name="brand_primary_light">#8B1A1A</color>
+    <color name="brand_accent">#4A0A0A</color>
+    
+    <!-- Global Theme Colors (NMIMS Portal - Premium Dark Theme) -->
+    <color name="portal_header_dark">#121212</color> <!-- Premium Dark Background -->
+    <color name="background_light">#F5F5F5</color> <!-- Original Light Background -->
+    <color name="portal_header_accent">#991D11</color> 
+
+    <!-- Status Colors -->
+    <color name="status_pending">#F57C00</color>
+    <color name="status_approved">#2E7D32</color>
+    <color name="status_rejected">#C62828</color>
+
+    <!-- Surface Colors (Light Theme) -->
+    <color name="brand_dark">#F5F5F5</color> 
+    <color name="surface_dark">#F5F5F5</color> 
+    <color name="surface_card">#FFFFFF</color>
+    <color name="surface_input">#FFFFFF</color>
+    <color name="surface_card_dark">#FFFFFF</color> 
+
+    <!-- Text Colors (Light Theme) -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_hint">#BDBDBD</color>
+    <color name="divider">#EEEEEE</color>
+
+    <!-- Other -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#212121</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- Role Colors -->
+    <color name="color_student">#991D11</color>
+    <color name="color_warden">#991D11</color>
+    <color name="color_security">#991D11</color>
+</resources>

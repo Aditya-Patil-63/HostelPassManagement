@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_background"
+    android:padding="14dp"
+    android:layout_marginBottom="10dp">
+
+    <!-- Status chip -->
+    <TextView
+        android:id="@+id/tvItemStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PENDING"
+        android:textColor="@color/status_pending"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:background="@drawable/chip_pending"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" />
+
+    <!-- Student Name -->
+    <TextView
+        android:id="@+id/tvItemStudentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student Name"
+        android:textColor="@color/text_primary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/tvItemStatus"
+        android:layout_marginRight="8dp" />
+
+    <!-- Sub-info (reason / dates) -->
+    <TextView
+        android:id="@+id/tvItemSubInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Going Home · 12/04 → 14/04"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/tvItemType"
+        android:layout_below="@id/tvItemStudentName"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="4dp" />
+
+    <!-- Type badge -->
+    <TextView
+        android:id="@+id/tvItemType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LEAVE"
+        android:textColor="@color/brand_primary"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

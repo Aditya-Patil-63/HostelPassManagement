@@ -1,0 +1,11 @@
+# Outing Time-Table(This week) — Shirpur Campus Hostel
+
+MONDAY=THIRD Year
+TUESDAY=FIRST Year
+WEDNESDAY=FOURTH Year
+THURSDAY=SECOND Year
+
+# Additional Restrictions:
+# 1. Frequency: Maximum 2 outings per month per student.
+# 2. Mandatory Gap: Minimum gap of 15 days between any two outings.
+

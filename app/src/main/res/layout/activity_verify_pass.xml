@@ -1,0 +1,145 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/portal_header_dark">
+
+    <!-- Header (Portal Gradient) -->
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/header_portal_gradient"
+        android:padding="20dp"
+        android:paddingTop="16dp"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_back_arrow"
+            android:background="@drawable/card_background"
+            android:padding="8dp"
+            android:scaleType="centerInside"
+            android:tint="@color/text_primary" />
+
+        <TextView
+            android:id="@+id/tvVerifyTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="   VERIFY PASS   "
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_portal_header"
+            android:layout_marginLeft="14dp"
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+    <!-- Input Section -->
+    <LinearLayout
+        android:id="@+id/inputSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_below="@id/toolbar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Student ID"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etPassId"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/card_background"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:hint="Student SAP ID"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:inputType="text"
+            android:imeOptions="actionSearch" />
+
+        <Button
+            android:id="@+id/btnVerify"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="🔍  Verify Pass"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_primary"
+            android:layout_marginTop="14dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnScanQr"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="📷  Scan QR"
+            android:textColor="@color/brand_primary"
+            android:background="@drawable/btn_secondary"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Dynamic Pass Card (built in Java) -->
+    <FrameLayout
+        android:id="@+id/passCardContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputSection"
+        android:padding="20dp"
+        android:paddingTop="0dp"
+        android:visibility="gone" />
+
+    <!-- Not Found state -->
+    <LinearLayout
+        android:id="@+id/notFoundState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="40dp"
+        android:layout_below="@id/inputSection"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="❌"
+            android:textSize="48sp" />
+
+        <TextView
+            android:id="@+id/tvNotFoundText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pass not found"
+            android:textColor="@color/status_rejected"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/inputSection"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:indeterminateTint="@color/brand_primary" />
+
+</RelativeLayout>

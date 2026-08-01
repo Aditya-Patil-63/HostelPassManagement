@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_background"
+    android:padding="14dp">
+
+    <!-- Status Indicator (Vertical bar) -->
+    <View
+        android:id="@+id/statusBar"
+        android:layout_width="4dp"
+        android:layout_height="36dp"
+        android:background="@color/status_approved"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" />
+
+    <!-- Name -->
+    <TextView
+        android:id="@+id/tvRecordName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student Name"
+        android:textColor="@color/text_primary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_toRightOf="@id/statusBar"
+        android:layout_marginLeft="12dp" />
+
+    <!-- Type + Date -->
+    <TextView
+        android:id="@+id/tvRecordInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Leave Pass · 12/04/2025"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp"
+        android:layout_toRightOf="@id/statusBar"
+        android:layout_below="@id/tvRecordName"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="4dp" />
+
+    <!-- Status -->
+    <TextView
+        android:id="@+id/tvRecordStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="APPROVED"
+        android:textColor="@color/status_approved"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp" />
+
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HostelPassManagement"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".RoleSelectionActivity" 
+            android:exported="false"
+            android:theme="@style/Theme.HostelPassManagement.Light" />
+        <activity android:name=".LoginActivity" 
+            android:exported="false"
+            android:theme="@style/Theme.HostelPassManagement.Light" />
+        <activity android:name=".RegisterActivity" android:exported="false" />
+        
+        <activity android:name=".StudentDashboardActivity" android:exported="false" />
+        <activity android:name=".WardenDashboardActivity" android:exported="false" />
+        <activity android:name=".SecurityDashboardActivity" android:exported="false" />
+        
+        <activity android:name=".ApplyLeaveActivity" android:exported="false" />
+        <activity android:name=".ApplyOutPassActivity" android:exported="false" />
+        <activity android:name=".ViewStatusActivity" android:exported="false" />
+        
+        <activity android:name=".LeaveRequestsActivity" android:exported="false" />
+        <activity android:name=".OutPassRequestsActivity" android:exported="false" />
+        <activity android:name=".ViewRecordsActivity" android:exported="false" />
+        <activity android:name=".RequestDetailActivity" android:exported="false" />
+        
+        <activity android:name=".VerifyPassActivity" android:exported="false" />
+        <activity android:name=".ReturnRecordActivity" android:exported="false" />
+        <activity android:name=".ProfileActivity" android:exported="false" />
+        <activity android:name=".NotificationsActivity" android:exported="false" />
+
+        <service android:name=".MyFirebaseMessagingService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

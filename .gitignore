@@ -1,0 +1,40 @@
+# Android Studio / Gradle
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+
+# User-specific / Local
+local.properties
+.idea/
+*.iws
+*.ipr
+
+# Build results
+/app/build/
+/build/
+
+# Log files
+*.log
+
+# Sensitive Info
+google-services.json
+app/google-services.json
+*.jks
+*.keystore
+
+# Build logs and Cloud Functions
+build_log.txt
+functions/node_modules/
+functions/.firebaserc
+

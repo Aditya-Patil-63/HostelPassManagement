@@ -1,0 +1,84 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Function to check if the user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    // Function to get the user's role from their User document
+    function getUserRole() {
+      return get(/databases/$(database)/documents/Users/$(request.auth.uid)).data.role;
+    }
+
+    // 5. Deny all other access by default
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    match /Users/{userId} {
+      // Allow any authenticated user to READ basic user info
+      // (needed for warden lookup + security viewing student photos)
+      allow read: if isAuthenticated();
+      
+      // Users can update and create only their own User document.
+      allow update, create: if isAuthenticated() && request.auth.uid == userId;
+    }
+
+    match /LeaveRequests/{requestId} {
+      // 1. Students can create their own LeaveRequests
+      allow create: if isAuthenticated() 
+                    && getUserRole() == 'student' 
+                    && request.resource.data.studentId == request.auth.uid;
+      
+      // 1. Students can read ONLY their own requests.
+      // (Warden also needs read access to see and approve them)
+      allow read: if isAuthenticated() && (
+        (getUserRole() == 'student' && resource.data.studentId == request.auth.uid) ||
+        getUserRole() == 'warden'
+      );
+      
+      // 2. Only users with role "warden" can update requests (approve/reject)
+      allow update: if isAuthenticated() && getUserRole() == 'warden';
+    }
+
+    match /OutPassRequests/{requestId} {
+      // 1. Students can create their own OutPassRequests
+      allow create: if isAuthenticated() 
+                    && getUserRole() == 'student' 
+                    && request.resource.data.studentId == request.auth.uid;
+      
+      // 1. Students can read ONLY their own requests.
+      // (Warden also needs read access to see and approve them)
+      allow read: if isAuthenticated() && (
+        (getUserRole() == 'student' && resource.data.studentId == request.auth.uid) ||
+        getUserRole() == 'warden'
+      );
+      
+      // 2. Only users with role "warden" can update requests (approve/reject)
+      allow update: if isAuthenticated() && getUserRole() == 'warden';
+    }
+
+    match /Passes/{passId} {
+      // 1. Students can read ONLY their own passes.
+      // 3. Security or warden can read all passes.
+      allow read: if isAuthenticated() && (
+        (getUserRole() == 'student' && resource.data.studentId == request.auth.uid) ||
+        getUserRole() == 'security' || 
+        getUserRole() == 'warden'
+      );
+      
+      // 3. Only users with role "security" or "warden" can update Passes (mark OUT/IN)
+      allow update: if isAuthenticated() && (
+        getUserRole() == 'security' || 
+        getUserRole() == 'warden'
+      );
+    }
+
+    match /Notifications/{notificationId} {
+      // 1. Students (and other users) can read ONLY their own notifications
+      allow read: if isAuthenticated() && resource.data.recipientId == request.auth.uid;
+    }
+  }
+}
